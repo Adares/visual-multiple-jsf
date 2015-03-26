@@ -1,0 +1,18 @@
+body{background-color:#bdecb6;}
+#header {background-color:#b0b7c6;height:100px;text-align: center; display:table;width:100%;}
+#header-content{display: table-cell;vertical-align: middle;}
+#middle-menu{float:left;width:200px;margin-top:10px;}
+#middle-content{margin-left:210px;margin-top:10px;background-color:#bdecb6;}
+#footer{position:absolute;bottom:0;left:0;background-color:#b0b7c6;height:50px;text-align: center;display: table;clear:both;width:100%;}
+#footer-content{display: table-cell;vertical-align: middle;}
+
+.p-content{text-indent: 25px; 
+}
+
+
+.link a{
+    display: block; /* Ссылка как блочный элемент */
+    text-align: center; /* Выравнивание по центру */
+    margin-bottom:5px;
+    background-color:gray;
+    color:black;}

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title> #{msg.app_name}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/main_template.xhtml">
+            <ui:define name="content">
+                #{msg.schoolMultiplication}
+
+                <h:form>
+                    <h:panelGrid columns="3">
+                        <h:outputText value="Введите число 1"/>
+                        <h:inputTextarea value="#{schoolMultiplication.s1}" id="s1" cols="20" rows="1"></h:inputTextarea>
+                        <h:message for="s1"/>
+
+                        <h:outputText value="Введите число 2"/>
+                        <h:inputTextarea value="#{schoolMultiplication.s2}" id="s2" cols="20" rows="1"></h:inputTextarea>
+                        <h:message for="s2"/>
+
+                        <h:outputText value="Результат"/>
+                        <h:inputTextarea value="#{schoolMultiplication.result}" id="result" readonly="true" cols="100" rows="25"/>
+                        <h:message for="result"/>
+
+                    </h:panelGrid>
+
+                    <h:commandButton value="Сгенерировать" action="#{schoolMultiplication.generate()}"/>
+                    <h:commandButton value="Рассчитать" action="#{schoolMultiplication.calculate()}"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
