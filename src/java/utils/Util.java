@@ -122,6 +122,7 @@ public class Util {
             sb.append(n[n.length - i - 1]);
         }
 
+        // удаление старших нулей
         if (sb.charAt(0) == '0') {
             sb.deleteCharAt(0);
         }

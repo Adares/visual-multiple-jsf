@@ -13,9 +13,9 @@ import utils.VisualMultiplication;
 @RequestScoped
 public class SchoolMultiplication {
 
-    private String s1;
-    private String s2;
-    private String result;
+    private String s1;     //строковое представление числа 1 
+    private String s2;     //строковое представление числа 2 
+    private String result; //строковое представление результата
 
     public String getS1() {
         return s1;
@@ -36,12 +36,14 @@ public class SchoolMultiplication {
     public String getResult() {
         return result;
     }
-
+    
+    // генерирование случайных чисел заданной длины
     public void generate() {
         s1 = utils.Util.generateString(10);
         s2 = utils.Util.generateString(10);
     }
 
+    // вычисление и анализ
     public void calculate() {
         VisualMultiplication vm = new VisualMultiplication(stringToIntRevertArray(s1), stringToIntRevertArray(s2));
         String[][] s = vm.doMultipleEx();

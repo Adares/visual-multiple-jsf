@@ -74,8 +74,6 @@ public class Caratsuba {
     // суммирование двух массивов со сдвигом shift
     private void addArrayEx(int[] a, int[] b, int shift) {
         int n = 0;
-        // заполним до тех кто больше
-
         while (n < b.length) {
             a[n + shift] += b[n];
             n++;
@@ -87,7 +85,6 @@ public class Caratsuba {
     // а>b
     private void subArrayEx(int[] a, int[] b) {
         int n = 0;
-//n < a.length && 
         while (n < b.length) {
             a[n] -= b[n];
             n++;

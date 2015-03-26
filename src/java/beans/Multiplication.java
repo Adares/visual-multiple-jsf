@@ -16,9 +16,10 @@ import static utils.Util.stringToIntRevertArray;
 @RequestScoped
 public class Multiplication {
 
-    private String s1;
-    private String s2;
-    private String result;
+    private String s1;     //строковое представление числа 1 
+    private String s2;     //строковое представление числа 2 
+    private String result; //строковое представление результата
+    
     // дополнительные поля
     private String resultMultipleOld;
     private String resultBigInteger;
@@ -56,11 +57,13 @@ public class Multiplication {
         return result;
     }
 
+    // генерирование случайных чисел заданной длины
     public void generate() {
         this.s1 = utils.Util.generateString(2000);
         this.s2 = utils.Util.generateString(2000);
     }
 
+    // вычисление и анализ
     public void calculate() {
         // здесь мы должны вычислить и вывести все необходимое           
         long lBegin;
@@ -75,7 +78,7 @@ public class Multiplication {
         int[] resultIntCaratsuba = normalize(c.doMultiple(num1, num2));
         long lTimeCaratsuba = System.currentTimeMillis() - lBegin;
 
-        // обыное умножение
+        // обычное умножение
         lBegin = System.currentTimeMillis();
         int[] resultIntMultipleOld = normalize(multipleOld(num1, num2));
         long lTimeMultipleOld = System.currentTimeMillis() - lBegin;
